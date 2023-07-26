@@ -1,0 +1,65 @@
+body {
+    background: white;
+    /* background: red url("../images/fundo.gif") repeat; */
+}
+
+.footer {
+    background-color: black;
+    color: white;
+}
+.produto-card-img {
+    width: 65%;
+    border-radius: 50%;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    aspect-ratio: 1 / 1;
+}
+
+.green{
+   color: #009640;
+   border-color: green;
+}
+
+@media screen and (max-width: 959px) {
+    .produto-card-sm {
+        padding: 1.5em .5em .5em;
+        border-radius: 2em;
+        text-align: center;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+        width: 19rem;
+    }
+}
+
+
+@media screen and (min-width: 960px) {
+    .produto-card-lg {
+        padding: 1.5em .5em .5em;
+        border-radius: 2em;
+        text-align: center;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+        width: 28rem;
+    }
+}
+.card-title {
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
+.card-value {
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
+.card-header .fa {
+    transition: .3s transform ease-in-out;
+}
+
+.card-header .collapsed .fa {
+    transform: rotate(90deg);
+}
+
+#heading-collapsed {
+    color: white !important;
+    background-color: transparent;
+    text-decoration: none;
+}

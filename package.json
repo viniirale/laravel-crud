@@ -1,0 +1,10 @@
+{
+    "private": true,
+    "devDependencies": {
+        "sass": "^1.32.11",
+        "sass-loader": "^11.0.1",
+        "axios": "^0.25",
+        "laravel-mix": "^6.0.6"
+    }
+    
+}
