@@ -5,10 +5,14 @@ use Illuminate\Support\Facades\Route;
 
 
 
-Route::get('/', [IndexController::class, 'index'])->name('index');
+ Route::get('/', [IndexController::class, 'index'])->name('index');
+ Route::resource('filtros', IndexController::class);
+
 Route::controller(LoginController::class)->group(function(){
     Route::get('/login-admin', 'index')->name('login-admin.index');
     Route::post('/login-admin', 'store')->name('login-admin.store');
     Route::get('/logout', 'destroy')->name('login-admin.destroy');
 });
 Auth::routes();
+
+

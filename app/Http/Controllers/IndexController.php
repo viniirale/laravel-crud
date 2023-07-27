@@ -9,11 +9,23 @@ use App\Models\Produto;
 
 class IndexController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $produtos = Produto::all();
-        $categorias = Categoria::all();
-        //$produtos = Produto::select('produto.*', 'categoria.nome')->join('categoria', 'produto.id_categoria', '=', 'categoria.id');
-        return view('index', ['produtos' => $produtos, 'categorias' => $categorias]);
+        $todasCategorias = Categoria::all();
+        $categoriasSelecionadas = $request->input('categorias', []);
+        $termoBusca = $request->input('busca');
+        $produtosQuery = Produto::query();
+        $categoriasQuery = Categoria::query();
+        if (!empty($categoriasSelecionadas)) {
+            $produtosQuery->whereIn('id_categoria', $categoriasSelecionadas);
+            $categoriasQuery->whereIn('id', $categoriasSelecionadas);
+        }
+        if (!empty($termoBusca)) {
+            $produtosQuery->where('nome', 'like', '%' . $termoBusca . '%');
+            $categoriasQuery->whereIn('id', $produtosQuery->get(['id_categoria']));
+        }
+        $produtos = $produtosQuery->get();
+        $categorias = $categoriasQuery->get();
+        return view('indexListaProdutos/index', ['produtos' => $produtos, 'categorias' => $categorias, 'todasCategorias' => $todasCategorias])->render();
     }
 }

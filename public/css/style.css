@@ -4,8 +4,8 @@ body {
 }
 
 .footer {
-    background-color: black;
-    color: white;
+    /* background-color: #009640; */
+    /* color: white; */
 }
 .produto-card-img {
     width: 65%;
@@ -15,24 +15,18 @@ body {
     aspect-ratio: 1 / 1;
 }
 
+.logo-img {
+    max-width: 20%;
+    height: auto;
+}
+
 .green{
    color: #009640;
    border-color: green;
 }
 
-@media screen and (max-width: 959px) {
+@media screen and (max-width: 767px) {
     .produto-card-sm {
-        padding: 1.5em .5em .5em;
-        border-radius: 2em;
-        text-align: center;
-        box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
-        width: 19rem;
-    }
-}
-
-
-@media screen and (min-width: 960px) {
-    .produto-card-lg {
         padding: 1.5em .5em .5em;
         border-radius: 2em;
         text-align: center;
@@ -40,6 +34,28 @@ body {
         width: 28rem;
     }
 }
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .produto-card-md {
+        padding: 1.5em .5em .5em;
+        border-radius: 2em;
+        text-align: center;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+        width: 20rem;
+    }
+}
+
+
+@media screen and (min-width: 992px) {
+    .produto-card-lg {
+        padding: 1.5em .5em .5em;
+        border-radius: 2em;
+        text-align: center;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+        width: 20rem;
+    }
+}
+ 
 .card-title {
     font-weight: 700;
     font-size: 1.5em;
@@ -63,3 +79,8 @@ body {
     background-color: transparent;
     text-decoration: none;
 }
+
+.border-top-green{
+    border-top: 2px solid #009640
+}
+
