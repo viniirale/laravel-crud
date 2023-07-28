@@ -1,8 +1,8 @@
-
 <div class=" box-shadow green col-lg-9 listaProdutos">
     <h1 class="text-center green">Lista de Produtos Admin</h1>
     <hr class="green">
     @foreach ($categorias as $categoria)
+    @if ($categoria->status == "Ativo")
     <div class="row mb-2 text-center">
         <h2 class="mb-3">{{$categoria->categoria}}</h2>
         @foreach ($produtos as $produto)
@@ -55,5 +55,6 @@
         @endif
         @endforeach
     </div>
+    @endif
     @endforeach
 </div>

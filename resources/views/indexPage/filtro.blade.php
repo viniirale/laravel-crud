@@ -3,12 +3,14 @@
         @csrf
         <h4 class="text-center green">Filtrar por Categorias:</h4>
         @foreach ($todasCategorias as $todasCategoria)
+        @if($todasCategoria->status == "Ativo")
         <div class="form-check">
             <input class="form-check-input" type="checkbox" name="categorias[]" value="{{ $todasCategoria->id }}" id="categoria{{ $todasCategoria->id }}">
             <label class="form-check-label" for="categoria{{ $todasCategoria->id }}">
                 {{ $todasCategoria->categoria }}
             </label>
         </div>
+        @endif
         @endforeach
         <h4 class="text-center green">Filtrar por Nome do Produto:</h4>
         <div class="mb-3">

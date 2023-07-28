@@ -3,10 +3,6 @@ body {
     /* background: red url("../images/fundo.gif") repeat; */
 }
 
-.footer {
-    /* background-color: #009640; */
-    /* color: white; */
-}
 .produto-card-img {
     width: 65%;
     border-radius: 50%;
@@ -14,15 +10,23 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, .5);
     aspect-ratio: 1 / 1;
 }
+@media screen and (min-width: 767px){
+    .logo-img-md {
+        max-width: 40%;
+        height: auto;
+    }
+}
 
-.logo-img {
-    max-width: 20%;
-    height: auto;
+@media screen and (max-width: 766px){
+    .logo-img-sm {
+        max-width: 60%;
+        height: auto;
+    }
 }
 
 .green{
-   color: #009640;
-   border-color: green;
+    color: #009640;
+    border-color: green;
 }
 
 @media screen and (max-width: 767px) {
@@ -55,7 +59,7 @@ body {
         width: 20rem;
     }
 }
- 
+
 .card-title {
     font-weight: 700;
     font-size: 1.5em;

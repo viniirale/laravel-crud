@@ -21,7 +21,7 @@ return new class extends Migration
             $table->float('valor');
             $table->string('imagem')->nullable();
             $table->unsignedBigInteger('id_categoria');
-            $table->foreign('id_categoria')->on('categorias')->references('id');
+            $table->foreign('id_categoria')->on('categorias')->references('id')->onDelete('cascade');;
         });
     }
 

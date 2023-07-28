@@ -4,12 +4,17 @@
     @foreach ($categorias as $categoria)
     <div class="row mb-2 d-flex justify-content-start align-items-start">
         <div class="col">
-        <h2 class="mb-3">
-            {{$categoria->categoria}}
-        </h2>
-    </div>
+            <h2 class="mb-3">
+                {{$categoria->categoria}}
+            </h2>
+        </div>
         <div class="col">
-            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#edit{{ $categoria->id }}">
+            <h2 class="mb-3">
+                {{$categoria->status}}
+            </h2>
+        </div>
+        <div class="col">
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#editCategoria{{ $categoria->id }}">
                 <i class="bi bi-pencil-square"></i>
             </button></h2>
             @include('adminPage/categorias/editCategoriaModalAdmin')

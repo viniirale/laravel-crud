@@ -1,12 +1,11 @@
-
-<div class="modal fade" id="edit{{ $categoria->id }}">
+<div class="modal fade" id="editCategoria{{ $categoria->id }}">
     <div class="modal-dialog modal-fullscreen modal-dialog-centered modal-dialog-scrollable">
         <div class="modal-content">
             <div class="modal-header d-flex ">
                 <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
             </div>
             <div>
-                <h4 class="modal-title ">{{ $categoria->categoria }}</h4>  
+                <h4 class="modal-title text-center">Editar Categoria</h4>  
             </div>
             <div class="modal-body card-text">
                 <form class="green" id="editarCategoriaForm" action="{{ route('editar.categoria', $categoria->id) }}" method="POST" enctype="multipart/form-data">
@@ -20,8 +19,16 @@
                         @enderror
                     </div>
                     <div class="mb-3">
-                        <label for="status-categoria-form-edit-modal" class="form-label"><h5>Descrição da Categoria </h5></label>
-                        <input name="status-categoria-form-edit-modal" type="text" class="form-control" id="status-categoria-form-edit-modal" value="{{$categoria->status}}" required>
+                        <select class="form-select mb-5" aria-label="" name="status-categoria-form-edit-modal" required>
+                            <option value="">Selecione um status</option>
+                            @if($categoria->status == "Ativo")
+                            <option value="Ativo" selected>Ativo</option>
+                            <option value="Inativo">Inativo</option>
+                            @elseif($categoria->status == "Inativo")
+                            <option value="Ativo" >Ativo</option>
+                            <option value="Inativo" selected>Inativo </option>
+                            @endif
+                        </select>
                         @error('status-categoria-form-edit-modal')
                         <span>{{ $message }}</span>
                         @enderror

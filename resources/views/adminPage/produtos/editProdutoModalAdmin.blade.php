@@ -1,4 +1,3 @@
-
 <div class="modal fade" id="edit{{ $produto->id }}">
     <div class="modal-dialog modal-fullscreen modal-dialog-centered modal-dialog-scrollable">
         <div class="modal-content">
