@@ -28,25 +28,25 @@ class ProdutoSeeder extends Seeder
                 Suspendisse mauris nibh, dapibus ac mollis in, mattis sit amet nisl. Suspendisse blandit ipsum eu libero sollicitudin malesuada. Nam aliquam eleifend leo, sit amet rhoncus leo hendrerit eu. Fusce faucibus tortor vel commodo ullamcorper. Pellentesque sed venenatis sapien. In nec quam at felis faucibus dictum in vitae tortor. Sed a pretium augue, eu condimentum nisl. Etiam faucibus dui dui, et luctus felis finibus a. Nam tincidunt ante nec eros mollis rutrum. Phasellus malesuada ultricies porta. Donec nulla quam, efficitur vitae scelerisque quis, condimentum et turpis. Mauris et lobortis dolor, eu semper ex. Quisque sit amet massa dui. Sed rutrum auctor pretium.',
                 'valor' => 13.59,
                 'id_categoria' => 1,
-                'imagem' => 'images/vassoura.jpg'
+                'imagem' => 'storage/images/vassoura.jpg'
             ],
             ['nome' => 'Fone de ouvido',
             'descricao' => 'Fones para escutar músicas',
             'valor' => 25,
             'id_categoria' => 2,
-            'imagem' => 'images/fone_de_ouvido.jpg'
+            'imagem' => 'storage/images/fone_de_ouvido.jpg'
         ],
         ['nome' => 'Post-It',
         'descricao' => 'Papel para escrever anotações e colar em lugares',
         'valor' => 1.99,
         'id_categoria' => 3,
-        'imagem' => 'images/post-it.jpg'
+        'imagem' => 'storage/images/post-it.jpg'
     ],
     ['nome' => 'Carregador de Celular',
         'descricao' => 'Dispositivo utilizado para carregar o celular, disponivel somente para usb-c',
         'valor' => 50.0,
         'id_categoria' => 2,
-        'imagem' => 'images/carregador-de-celular.jpeg'
+        'imagem' => 'storage/images/carregador-de-celular.jpeg'
         ]
         ]
     );  

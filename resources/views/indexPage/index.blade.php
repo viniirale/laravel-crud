@@ -3,7 +3,7 @@
 @section('content')
 <div class="row border-top-green">
     
-    @include('indexListaProdutos/filtro')
-    @include('indexListaProdutos/listaProdutos')
+    @include('indexPage/filtro')
+    @include('indexPage/listaProdutos')
 </div>
 @endsection

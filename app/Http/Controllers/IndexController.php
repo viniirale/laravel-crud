@@ -26,6 +26,10 @@ class IndexController extends Controller
         }
         $produtos = $produtosQuery->get();
         $categorias = $categoriasQuery->get();
-        return view('indexListaProdutos/index', ['produtos' => $produtos, 'categorias' => $categorias, 'todasCategorias' => $todasCategorias])->render();
+        foreach ($produtos as $produto) {
+            $produto->valor_formatado = number_format($produto->valor, 2, ',', '');
+        }
+        
+        return view('indexPage/index', ['produtos' => $produtos, 'categorias' => $categorias, 'todasCategorias' => $todasCategorias])->render();
     }
 }
