@@ -28,6 +28,6 @@ class CategoriaSeeder extends Seeder
                 'status' => 'Inativo',
                 ]
             ]
-        );  
+        );
 }
 }

@@ -2,7 +2,7 @@ function previewImageEditModal() {
     const fileInput = event.target;
     const previewImage = document.getElementById('frameEditModal');
 
-    if (fileInput.files && fileInput.files[0]) {
+    if (fileInput.files[0]) {
         const reader = new FileReader();
 
         reader.onload = function(e) {

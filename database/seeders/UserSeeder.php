@@ -20,6 +20,6 @@ class UserSeeder extends Seeder
             'name' => 'João da Silva',
             'email' => 'joaodasilva@email.com',
             'password' => bcrypt('1234'),
-            ]);  
+            ]);
     }
 }
